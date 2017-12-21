@@ -1,0 +1,182 @@
+Todays'Agenda
+
+-->Access specifiers ( pending topics ) 
+-->Quick exercise on class design
+-->CRUD operation on any entity class with interface 
+-->Command line arguments --> 
+//STEP10 EXEC PGM=PROGRAM,PARAM='WALKING THRU THE LIFE IS NOT SO HARD '
+-->Variable Lenght arguements
+-->ENUM ( if time permits ) 
+-->Exception handling ( if time permits )
+
+try,throw,throws,catch,finally
+user defined exception 
+
+
+
+Default public and protected has the same meaning in same package
+
+// wrong class design 
+
+class NumberServiceProvider{
+  private int a;
+  // setter , getter and constructor for a
+  int squareNumber(int a){
+     return a*a;
+  }
+}
+
+/******************************************************/
+
+first option 
+
+class NumberServiceProvider{
+  private int a;
+  // setter , getter and constructor for a
+  int squareNumber( ){
+     return a*a;
+  }
+}
+
+/*******************************************************/
+
+second option 
+
+class NumberServiceProvider{
+     static int squareNumber(int a){
+     return a*a;
+  }
+}
+
+class Car{
+   private int carNumber;
+   private String carName;
+   private int carCost;
+   // construtors , setters,getters
+   //hash code , equals,toString 
+}
+
+
+
+CRUD
+
+interface ICarServiceProvider{
+      String createCar(Car);  
+      Car readACar(carNumber);
+      Car[] readAllCars( );
+      String updateCar(carNumber,carCost);
+      boolean deleteACar(carNumber)
+
+}
+   
+class Maruthi implements ICarServiceProvider{
+      String createCar(Car){
+       logics to store car details in database 
+      }
+      Car readACar(carNumber){
+      }
+      Car[] readAllCars( ){
+      }
+      String updateCar(carNumber,carCost){
+      }
+      boolean deleteACar(carNumber){
+      }
+}
+
+class Hundai implements ICarServiceProvider{
+      String createCar(Car){
+       logics to store car details in XML file 
+      }
+      Car readACar(carNumber){
+      }
+      Car[] readAllCars( ){
+      }
+      String updateCar(carNumber,carCost){
+      }
+      boolean deleteACar(carNumber){
+      }
+}
+
+class Ford implements ICarServiceProvider{
+      String createCar(Car){
+       logics to store car details in text file
+      }
+      Car readACar(carNumber){
+      }
+      Car[] readAllCars( ){
+      }
+      String updateCar(carNumber,carCost){
+      }
+      boolean deleteACar(carNumber){
+      }
+}
+/*****************************************************************************************/
+
+ENUM - Enumeartion 
+
+When to use 
+
+Gender - male or female 
+Color  - red,blue,green,black
+weekdays - sunday to saturday
+monthname - jan to dec
+season-WINTER,	SUMMER,	SPRING,	AUTUMN
+
+When not to use 
+
+empname
+salary
+age
+
+
+Enum is widely used in validation purpose 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
